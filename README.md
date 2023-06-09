@@ -1,6 +1,8 @@
 # EWISER Fork
 This repository is a fork of the [EWISER](https://github.com/SapienzaNLP/ewiser) repository. The original README is below. The installation guide from the original README has been updated to reflect the changes made to the original repository.
 
+> Note that this fork repository is intended to be used within the context of my Master's thesis repository [msc-thesis-ai-imp](https://github.com/jesper-sk/msc-thesis-ai-imp). The changes made to this repository are not intended to be used outside of this context.
+
 ## Changes
 - In progress
 
