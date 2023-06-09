@@ -1,3 +1,19 @@
+# EWISER Fork
+This repository is a fork of the [EWISER](https://github.com/SapienzaNLP/ewiser) repository. The original README is below. The installation guide from the original README has been updated to reflect the changes made to the original repository.
+
+## Changes
+- In progress
+
+## Installation
+The installation guide has been altered slightly to work with the `pipenv` setup of the [main repository](https://github.com/jesper-sk/msc-thesis-ai-imp). We'll need some pytorch-geometry dependencies, with pytorch and CUDA support for the versions used in the main repository. The following commands should be run from the root of the main repository:
+```
+pipenv run python -m pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-2.0.1+cu118.html
+cd repos/ewiser
+pipenv run python -m pip install -r requirements.txt
+pipenv run python -m pip install -e .
+```
+Now you are ready to start!
+
 # EWISER (Enhanced WSD Integrating Synset Embeddings and Relations)
 This repo hosts the code necessary to reproduce the results of our ACL 2020 paper, *Breaking Through the 80% Glass Ceiling: Raising the State of the Art in Word Sense Disambiguation by Incorporating Knowledge Graph Information*, by Michele Bevilacqua and Roberto Navigli, which you can read on [ACL Anthology](https://www.aclweb.org/anthology/2020.acl-main.255/).
 
@@ -23,24 +39,6 @@ Check out the [Multilingual](#Multilingual) section below!
     abstract = "Neural architectures are the current state of the art in Word Sense Disambiguation (WSD). However, they make limited use of the vast amount of relational information encoded in Lexical Knowledge Bases (LKB). We present Enhanced WSD Integrating Synset Embeddings and Relations (EWISER), a neural supervised architecture that is able to tap into this wealth of knowledge by embedding information from the LKB graph within the neural architecture, and to exploit pretrained synset embeddings, enabling the network to predict synsets that are not in the training set. As a result, we set a new state of the art on almost all the evaluation settings considered, also breaking through, for the first time, the 80{\%} ceiling on the concatenation of all the standard all-words English WSD evaluation benchmarks. On multilingual all-words WSD, we report state-of-the-art results by training on nothing but English.",
 }
 ```
-
-## Installation
-It is recommended to create a fresh `conda` env to use `ewiser` (e.g. `conda create -n ewiser python=3.7 pip; conda activate ewiser`).
-
-You'll also need [`pytorch`](https://pytorch.org/get-started/locally/) 1.6, and [`torch_sparse`](https://github.com/rusty1s/pytorch_sparse). Assuming you use CUDA 10.1:
-```
-conda install pytorch=1.6.0 torchvision cudatoolkit=10.1 -c pytorch
-pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.6.0+cu101.html
-```
-
-Clone this repo, install the other dependencies, and then `ewiser` as well.
-```
-git clone https://github.com/SapienzaNLP/ewiser.git
-cd ewiser
-pip install -r requirements.txt
-pip install -e .
-```
-Now you are ready to start!
 
 ## Externally downloadable resources
 

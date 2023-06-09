@@ -4,4 +4,3 @@ h5py
 joblib
 fairseq>=0.9.0
 pytorch_pretrained_bert
-torch_scatter
