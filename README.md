@@ -7,11 +7,12 @@ This repository is a fork of the [EWISER](https://github.com/SapienzaNLP/ewiser)
 - In progress
 
 ## Installation
-The installation guide has been altered slightly to work with the `pipenv` setup of the [main repository](https://github.com/jesper-sk/msc-thesis-ai-imp). We'll need some pytorch-geometry dependencies, with pytorch and CUDA support for the versions used in the main repository. The following commands should be run from the EWISER repository root:
+The installation guide has been altered slightly to work with the `pipenv` setup of the [main repository](https://github.com/jesper-sk/msc-thesis-ai-imp). We'll need some pytorch-geometry dependencies, with pytorch and CUDA support for the versions used in the main repository. The following commands should be run from _the main repository root_:
 ```
 pipenv run python -m pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-2.0.1+cu118.html
-pipenv run python -m pip install -r requirements.txt
-pipenv run python -m pip install -e .
+pipenv run python -m pip install -r repos/ewiser/requirements.txt
+pipenv run python -m pip install -e repos/ewiser
+pipenv run python -m pip install repos/ewiser
 ```
 Now you are ready to start!
 
