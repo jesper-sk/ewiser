@@ -3,9 +3,6 @@ This repository is a fork of the [EWISER](https://github.com/SapienzaNLP/ewiser)
 
 > Note that this fork repository is intended to be used within the context of my Master's thesis repository [msc-thesis-ai-imp](https://github.com/jesper-sk/msc-thesis-ai-imp). The changes made to this repository are not intended to be used outside of this context.
 
-## Changes
-- In progress
-
 ## Installation
 The installation guide has been altered slightly to work with the `pipenv` setup of the [main repository](https://github.com/jesper-sk/msc-thesis-ai-imp). We'll need some pytorch-geometry dependencies, with pytorch and CUDA support for the versions used in the main repository. All other dependencies come from the `requirements.txt`. The installation guide is as follows:
 ```
@@ -13,8 +10,18 @@ python -m pip install -r requirements.txt
 python -m pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-2.0.1+cu118.html
 python -m pip install -e .
 ```
-It is recommended to use a virtual environment, such as `pipenv` or `conda`.
+It is recommended to use a virtual environment, such as `pipenv` or `conda`. Now that we've installed all packages, we need to download a `spaCy` model. This is done by running the following command:
+```
+python -m spacy download en_core_web_sm
+```
 Now you are ready to start!
+
+## Changes
+- Add `bin/annotate_cwsd.py` to annotate a corpus with the EWISER model.
+- Add `find_packages()` to `setup.py` to include the `ewiser` package.
+- Add `spacy` as dependency in `requirements.txt`.
+- Update `gitignore` to ignore `build` directory.
+- Update `README.md` to reflect changes made to the installation guide.
 
 # EWISER (Enhanced WSD Integrating Synset Embeddings and Relations)
 This repo hosts the code necessary to reproduce the results of our ACL 2020 paper, *Breaking Through the 80% Glass Ceiling: Raising the State of the Art in Word Sense Disambiguation by Incorporating Knowledge Graph Information*, by Michele Bevilacqua and Roberto Navigli, which you can read on [ACL Anthology](https://www.aclweb.org/anthology/2020.acl-main.255/).
