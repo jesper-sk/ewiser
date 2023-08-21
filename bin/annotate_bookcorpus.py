@@ -104,11 +104,6 @@ def run(args):
         ) as file:
             json.dump(output, file, indent=2)
 
-    print("Done! Shutdown...")
-    import os
-
-    os.system("shutdown -s -f -t 0")
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

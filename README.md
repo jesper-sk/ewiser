@@ -18,6 +18,7 @@ Now you are ready to start!
 
 ## Changes
 - Add `bin/annotate_cwsd.py` to annotate a corpus with the EWISER model.
+- Add `bin/annotate_bookcorpus.py` to annotate the bookcorpus (and, probably, other huggingface datasets) with the EWISER model.
 - Add `find_packages()` to `setup.py` to include the `ewiser` package.
 - Add `spacy` as dependency in `requirements.txt`.
 - Update `gitignore` to ignore `build` directory.
